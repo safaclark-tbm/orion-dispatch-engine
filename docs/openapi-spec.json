@@ -1,0 +1,16 @@
+#RESTfull API
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Orion-Dispatch API",
+    "version": "1.0.0",
+    "description": "API for triggering logistics notifications via AWS Lambda and SQS."
+  },
+  "paths": {
+    "/dispatch": {
+      "post": {
+        "summary": "Trigger a new dispatch notification"
+      }
+    }
+  }
+}
