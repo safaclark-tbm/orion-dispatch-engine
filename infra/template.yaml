@@ -1,0 +1,16 @@
+#AWS setup
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Orion-Dispatch Infrastructure Stack
+
+Resources:
+  OrionDispatchQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: "OrionDispatchQueue"
+
+  OrionLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/lambda_handler.handler
+      Runtime: python3.12
